@@ -41,7 +41,19 @@ uniquesocket.on("disconnect", function () {
     else if(uniquesocket.id === players.white){
         delete players.black
     }
+});
+
+
+uniquesocket.on("move", (move) => {
+    try {
+        if (chess) {
+            
+        }
+    } catch (error) {
+        
+    }
 })
+
 });
 
 server.listen(3000, function(){
