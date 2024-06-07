@@ -47,7 +47,7 @@ uniquesocket.on("disconnect", function () {
 uniquesocket.on("move", (move) => {
     try {
         if (chess) {
-            
+             
         }
     } catch (error) {
         
