@@ -46,8 +46,8 @@ uniquesocket.on("disconnect", function () {
 
 uniquesocket.on("move", (move) => {
     try {
-        if (chess) {
-        }
+        if (chess.turn()=== "w" && uniquesocket.id !== players.white) return ;
+        if (chess.turn()=== "b" && uniquesocket.id !== players.black) return ;
     } catch (error) {
         
     }
