@@ -48,10 +48,15 @@ uniquesocket.on("move", (move) => {
     try {
         if (chess.turn()=== "w" && uniquesocket.id !== players.white) return ;
         if (chess.turn()=== "b" && uniquesocket.id !== players.black) return ;
-    } catch (error) {
-        
-    }
-})
+
+         const result = chess.move(move)
+         if(result){
+            currentPlayer = chess.turn();
+            io.emit("move", move);
+         }
+
+    } catch (error) {}
+});
 
 });
 
