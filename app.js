@@ -53,9 +53,16 @@ uniquesocket.on("move", (move) => {
          if(result){
             currentPlayer = chess.turn();
             io.emit("move", move);
+            io.emit("boardState", chess.fen())
+         }else{
+            console.log("Invalid Move : ", move);
+            uniquesocket.emit("invalidmove",move)
          }
 
-    } catch (error) {}
+    } catch (error) {
+        console.log(error)
+        uniquesocket.emit("Invalid Move : ", move);
+    }
 });
 
 });
