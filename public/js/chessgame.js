@@ -6,7 +6,7 @@ let draggedPiece = null;
 let sourceSquare = null;
 let playerRole = null;
 
-const renderBoard = () => {
+const renderBoard  = () => {
     const board = chess.board();
     boardElement.innerHTML = "";
     board.forEach((row, rowindex) => {
