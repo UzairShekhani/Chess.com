@@ -8,7 +8,7 @@ let playerRole  = null;
 
 const renderBoard  = () => {
     const board = chess.board();
-    boardElement.innerHTML = "";  
+    boardElement.innerHTML = "";   
     board.forEach((row, rowindex) => {
         row.forEach((square, squareindex) => {
             const squareElement = document.createElement("div");
